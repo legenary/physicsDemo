@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+  <head>
+    <meta charset="utf-8" />
+    <title>lighting</title>
+  
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Yifu Luo</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">11100.0000000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Yifu Luo</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x0101</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+
+  <!-- <body onload="main()" onresize="drawResize()"> -->
+  <body onload="main()">
+    <canvas id="webgl" width="400" height="400">
+      Please use a browser that supports "canvas"
+    </canvas>
+    <p>
+      This is a Pixar Lamp jumping and all sorts of object! You can switch between lighting and shading options.<br>
+      Switch between shader:
+      <button type="button" onClick='shaderControl()' id='Shader'>Phong/Gauraud shader</button>
+       &nbsp; lighting:
+      <button type="button" onClick='lightingControl()' id='Lighting'>Phong/Blinn-Phong lighting</button> <br>
+      Turn on/off head light:
+      <button type="button" onClick='headLightControl()'>Head light on/off</button>
+       &nbsp; point light:
+      <button type="button" onClick='pointLightControl()'>Point light on/off</button> <br>
+      Attenuation option:
+      <button type="button" onClick='ATT0()'>None</button>
+      <button type="button" onClick='ATT1()'>1/dist</button>
+      <button type="button" onClick='ATT2()'>1/dist^2</button>
+       &nbsp; Lighting color:
+      <button type="button" onClick='setLightColor0()'>White</button>
+      <button type="button" onClick='setLightColor1()'>Red</button>
+      <button type="button" onClick='setLightColor2()'>Green</button>
+      <button type="button" onClick='setLightColor3()'>Blue</button> <br>
+      Use 'M' to change material... Use 'PageUp' and 'PageDown' to move the point light location...
+      <div class="slidecontainer">
+        Ambient light:
+        R: <input type="range" min="0" max="255" value="200" class="slider" id="I_ambi_r">
+        G: <input type="range" min="0" max="255" value="200" class="slider" id="I_ambi_g">
+        B: <input type="range" min="0" max="255" value="200" class="slider" id="I_ambi_b">
+      </div>
+      <div class="slidecontainer">
+        Diffuse light: &nbsp;
+        R: <input type="range" min="0" max="255" value="255" class="slider" id="I_diff_r">
+        G: <input type="range" min="0" max="255" value="255" class="slider" id="I_diff_g">
+        B: <input type="range" min="0" max="255" value="255" class="slider" id="I_diff_b">
+      </div>
+      <div class="slidecontainer">
+        Specular light:
+        R: <input type="range" min="0" max="255" value="155" class="slider" id="I_spec_r">
+        G: <input type="range" min="0" max="255" value="155" class="slider" id="I_spec_g">
+        B: <input type="range" min="0" max="255" value="155" class="slider" id="I_spec_b">
+        <button type="button" onClick='setLightColor0()'>Clear</button>
+      </div>
+      <br>
+      Use 'W', 'A', 'S', 'D' to translate camera. Use 'C' and 'B' to dive and elevate.<br>
+      Use 'up', 'down', 'left' and 'right' to rotate the camear view. <br>
+
+      Use the mouse dragging to 'quaternionly' rotate the Lamp. It'll be fun! <br>
+      Pause/unpause animation:
+      <button type="button" onClick='runStop()'>Pause/unpause</button> or simply press 'P' <br>
+
+    <!-- <p>
+      <div id='Result'> Press a key... </div>
+    </p> -->
+
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="../lib/cuon-matrix-quat03.js"></script>
+    <script src="helperFunc.js"></script>
+    <script src="VBObox.js"></script>
+    <script src="utility_material_light.js"></script>
+    <script src="LuoYifu_ProjC.js"></script>
+  </body>
+</html>
