@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+  <head>
+    <meta charset="utf-8" />
+    <title>Project B</title>  <!-- Keep it short: title appears on browser tab-->
+		<!-- OPTIONAL: let's surround canvas with a thin blue outline -->
+		<style type =" text/ css"> canvas {border: 2px dotted blue;} </style>
+  
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Yifu Luo</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">21300.0000000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Yifu Luo</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x0101</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+
+	<!--	Create the HTML5 'canvas' element in which we will run WebGL
+	-->
+  <body onload="main()" onresize="onBrowserResize()">
+    <canvas id="webgl" width="800" height="500">
+    Please use a browser that supports "canvas"
+    </canvas>
+	<br> 
+	    <b>Ray Tracer: Press 't' to Trace!</b> (left: WebGL Scene Preview. Right: Ray-Traced Result.)
+	<br>
+	    <button type="button" onclick="onSuperSampleButton()" >Super-Sampling</button>
+	    <button type="button" onclick="onJitterButton()"      >Jitter</button>
+      <!-- onSuperSampleButton() and onJitterButton() 
+           modifies this span object's contents: -->
+	    <span id='AAreport'> 1 sample/pixel. No jitter. </span> 
+	<br>
+	    Mouse Drag: Aims the camera (turns left, right, up, down)
+	<br>
+	    W/S; A/D keys: move camera forward/backwards; strafe left/right.
+	<br>
+<hr> <!-- draw a horizontal line----------------------------------------------------------->
+  <button type="button" onclick="onLightHead()" >Toggle head light</button>
+  <button type="button" onclick="onLightPoint()" >Toggle point light</button>
+  <br>
+  	Depth of rays: 
+  <button type="button" onclick="onIncreaseDepth()" >increase</button>
+  <button type="button" onclick="onDecreaseDepth()" >decrease</button>
+
+
+	<!--	Load in the JavaScript libraries supplied by our textbook 
+			(Matsuda et al., 2013 WebGL Programming Guide) that help us
+			with WebGL programming:
+	-->
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+<!-- REMOVED!!		<script src="../lib/cuon-matrix-quat03.js"></script>  -->
+<!-- Instead, we UPGRADED to Brandon Jones' far-faster, 
+      far more complete vector/matrix/quaternion library: 
+ 			SEE: http://glmatrix.net/ fast vector/matrix lib for webGL  -->
+    <script src="../lib/glMatrix.js"></script> 
+
+		<!-- finally, our own code: -->
+		<script src="MatLight-Lib.js"></script>
+		<script src="GUIbox-Lib.js"></script>
+		<script src="VBObox-Lib.js"></script>
+		<script src="traceSupplement.js"></script>
+    <script src="LineGrid.js"></script>
+  </body>
+</html>
