@@ -34,6 +34,41 @@ Driven by the silver part
 
 ![](project2-mechanical_joints/physics-cart.gif)
 
+# Physics vehicle
+
+### Bump test
+
+https://github.com/legenary/physicsDemo/assets/38062004/e695967c-005c-4f87-8a01-b9ead1731235
+
+### Accelaration, deaccelaration, and jumping
+
+https://github.com/legenary/physicsDemo/assets/38062004/9d083237-7b07-48de-ae34-5370ced77e1c
+
+### Bump test: at low speed
+
+https://github.com/legenary/physicsDemo/assets/38062004/ab65afc2-92d3-425f-a1a4-250c46a4beff
+
+### Bump test: at high speed
+
+https://github.com/legenary/physicsDemo/assets/38062004/e59bbf83-c419-4eca-b6f3-72b3d108f183
+
+### Bump test: at low speed but with extra torque
+
+https://github.com/legenary/physicsDemo/assets/38062004/034417e4-9bf6-4f77-ae6f-40aaf0e23fd4
+
+### Steering test:
+
+https://github.com/legenary/physicsDemo/assets/38062004/506e7d2a-7b70-4640-b720-39b9057b4ae4
+
+Note: steering is a little bit goofy at this stage, for a couple of reasons:
+
+1. For simplicity, the tyre current just uses sphere simplified collision, which leads to only one contact point between each tyre and ground. This is not sufficient to provide enough tractive force and will cause relatively higher slip ratio.
+
+2. The friction force is homogeneous, meaning that the tyre won't provide any more lateral force, as opposed to the tractive force. This makes the vehicle easy to drift.
+
+3. The vehicle doesn't simulate the effect of wind at high speed which provides extra grip.
+
+The tyre model needs to be improved in the future.
 
 # rayTracing
 
