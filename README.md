@@ -1,7 +1,8 @@
 # mechanical joints
 
-<gif src="project2-mechanical_joints/star_engine.gif">
-![](https://github.com/legenary/physicsDemo/blob/main/project2-mechanical_joints/star_engine.gif)
+A star engine
+
+![](project2-mechanical_joints/star_engine.gif)
 
 
 # rayTracing
