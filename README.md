@@ -1,8 +1,38 @@
 # mechanical joints
 
-A star engine
+### A simple hinge joint and a ball joint. 
 
-![](project2-mechanical_joints/star_engine.gif)
+Poked by hands
+
+![](project2-mechanical_joints/hinge-and-ball.gif)
+
+### A hinge-prismatic joint. 
+
+Poked by hands
+
+![](project2-mechanical_joints/hinge-prismatic.gif)
+
+### A universal joint
+
+Poked by hands
+
+![](project2-mechanical_joints/U-joint.gif)
+
+### A cooler universal joint with only prismatic constraints
+
+Driven by the silver part
+
+![](project2-mechanical_joints/U-joint2.gif)
+
+### A star engine
+
+Driven by the silver part
+
+![](project2-mechanical_joints/star-engine.gif)
+
+### A physics cart
+
+![](project2-mechanical_joints/physics-cart.gif)
 
 
 # rayTracing
