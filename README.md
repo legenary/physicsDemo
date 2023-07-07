@@ -1,3 +1,10 @@
+# mechanical joints
+
+A star engine
+
+![](project2-mechanical_joints/star_engine.gif)
+
+
 # rayTracing
 
 These are two of the course projects for Computer Graphics I&II, where basic idea of illumination/lighting and a simple ray tracing program (and some 3D maths) were implemented.
@@ -15,4 +22,6 @@ In both projects, the user can adjust the location of the camera by W/A/S/D and 
 
 # Instructions
 Download. In each project folder, click to open "code/RUN.html" to run the little project on a webpage.
+
+
 
