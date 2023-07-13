@@ -44,7 +44,7 @@ Driven by the silver part
 
 # Physics vehicle
 
-### Bump test
+### Slope test
 
 https://github.com/legenary/physicsDemo/assets/38062004/e695967c-005c-4f87-8a01-b9ead1731235
 
