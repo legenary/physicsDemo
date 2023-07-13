@@ -1,4 +1,4 @@
-# mechanical joints
+# mechanical devices
 
 ### A simple hinge joint and a ball joint. 
 
@@ -6,13 +6,13 @@ Poked by hands
 
 ![](project2-mechanical_joints/hinge-and-ball.gif)
 
-### A hinge-prismatic joint. 
+### Hinge-prismatic joint. 
 
 Poked by hands
 
 ![](project2-mechanical_joints/hinge-prismatic.gif)
 
-### A universal joint
+### Universal joint
 
 Poked by hands
 
@@ -24,13 +24,21 @@ Driven by the silver part
 
 ![](project2-mechanical_joints/U-joint2.gif)
 
-### A star engine
+### Star engine
 
 Driven by the silver part
 
 ![](project2-mechanical_joints/star-engine.gif)
 
-### A physics cart
+### Rope bridge
+
+![](project2-mechanical_joints/rope-bridge.gif)
+
+### Rope swing
+
+![](project2-mechanical_joints/rope-swing.gif)
+
+### Physics cart
 
 ![](project2-mechanical_joints/physics-cart.gif)
 
